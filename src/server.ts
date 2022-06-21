@@ -30,7 +30,7 @@ import { filterImageFromURL, deleteLocalFiles } from "./util/util";
 
       res.on("finish", () => deleteLocalFiles([filteredpath]));
     } catch {
-      return res.status(500).send({ error: "Unable to process your request" });
+      return res.status(500).send(`Unable to process your request`);
     }
   });
 
